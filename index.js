@@ -14,4 +14,7 @@ app.get('/search', async (req, res) => {
     `, [q]);
     res.json(result.rows);
 });
-app.listen(3000);
+if (require.main === module) {
+    app.listen(3000, () => console.log('Search API on port 3000'));
+}
+module.exports = { app, pool };
