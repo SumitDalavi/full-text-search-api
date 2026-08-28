@@ -6,13 +6,13 @@ The following Mermaid.js sequence diagram maps the core workflow and interaction
 ```mermaid
 sequenceDiagram
     client->>API: GET /search?q=foo
-API->>Postgres: @@ to_tsquery('foo')
-Postgres-->>API: Results
+API->>SQLite: @@ to_tsquery('foo')
+SQLite-->>API: Results
 API-->>client: JSON
 ```
 
 ## Component Breakdown
-- **Core Technology**: Node.js, Postgres
+- **Core Technology**: Node.js, SQLite
 - **Design Paradigm**: Emphasizes high availability, fault tolerance, and security.
 
 ## Security & Scaling Considerations
