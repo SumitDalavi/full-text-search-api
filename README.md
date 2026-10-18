@@ -4,6 +4,10 @@
 # Full-Text Search API 🔍
 
 [![Release](https://img.shields.io/github/v/release/SumitDalavi/full-text-search-api?color=blue&logo=github)](https://github.com/SumitDalavi/full-text-search-api/releases)
+[![Release Workflow](https://github.com/SumitDalavi/full-text-search-api/actions/workflows/release.yml/badge.svg)](https://github.com/SumitDalavi/full-text-search-api/actions/workflows/release.yml)
+[![SBOM](https://img.shields.io/badge/SBOM-SPDX%20JSON-blueviolet?logo=spdx)](https://github.com/SumitDalavi/full-text-search-api/releases)
+
+[![Release](https://img.shields.io/github/v/release/SumitDalavi/full-text-search-api?color=blue&logo=github)](https://github.com/SumitDalavi/full-text-search-api/releases)
 [![SBOM](https://img.shields.io/badge/SBOM-SPDX%20JSON-blueviolet?logo=spdx)](https://github.com/SumitDalavi/full-text-search-api/releases)
 
 > Lightning-fast full-text search engine built natively on Postgres using tsvector and trigram indices.
@@ -119,7 +123,7 @@ To comply with strict portfolio audit requirements, we explicitly define the bou
 - **Fully Implemented:** The core state machine, API routes, database schemas, and integration tests are real and fully functional.
 - **Mocked / Demo Mode:** None. Fully implemented over embedded FTS5.
 
-## Release & Verification
+## Release & Security Verification
 
 The project includes an automated DevSecOps release pipeline (`.github/workflows/release.yml`) triggered on semantic version tags (`v*.*.*`).
 
@@ -139,3 +143,10 @@ gh release view v0.1.0 --repo SumitDalavi/full-text-search-api
 gh release download v0.1.0 --repo SumitDalavi/full-text-search-api --pattern "sbom.spdx.json"
 cat sbom.spdx.json | jq .
 ```
+
+## Documentation
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Runbook](docs/runbook.md)
+- [Decisions](docs/decisions.md)
+- [Changelog](docs/changelog.md)
