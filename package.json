@@ -1,6 +1,6 @@
 {
   "name": "full-text-search-api",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "Full Text Search API using Postgres tsvector",
   "main": "index.js",
   "scripts": {
