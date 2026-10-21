@@ -11,14 +11,10 @@
 > Lightning-fast full-text search engine built natively on Postgres using tsvector and trigram indices.
 
 ## The Problem
-## Problem Statement
-Deploying heavy search clusters like Elasticsearch is often overkill for medium-scale applications.
+Deploying separate distributed search clusters (e.g., Elasticsearch or OpenSearch) introduces immense operational overhead, synchronization lag, and extra infrastructure costs for workloads that can be queried directly in PostgreSQL.
 
 ## Architecture & Solution
-A self-contained search engine using SQLite's native FTS5 extension. It provides Porter stemming, BM25 ranking, and dynamic HTML snippets. Simple CRUD applications fail when subjected to high throughput, race conditions, or massive data sets.
-
-## The Solution
-This project implements a robust microservice architecture designed to handle these specific edge cases. By utilizing advanced paradigms like idempotency keys, advisory locks, or optimized caching layers, this service guarantees data integrity under load.
+This service provides high-performance full-text search directly atop PostgreSQL using GIN indices, tsvector text search vectors, and trigram matching for fuzzy search, eliminating external search cluster dependencies.
 
 ```text
 ┌──────────────┐      ┌───────────────┐      ┌───────────────┐
